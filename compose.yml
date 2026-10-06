@@ -1,6 +1,6 @@
 services:
   web:
-    image: sumanth1220/devops-flask-app:latest
+    image: sumanth1220/devops-flask-app:v1.0.0
     container_name: devops-flask-compose
     ports:
       - "5000:5000"
