@@ -1,0 +1,13 @@
+services:
+  web:
+    image: sumanth1220/devops-flask-app:latest
+    container_name: devops-flask-compose
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:5000/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
