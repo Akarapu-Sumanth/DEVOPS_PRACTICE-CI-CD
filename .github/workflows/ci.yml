@@ -38,3 +38,7 @@ jobs:
         run: |
           pip install pip-audit
           pip-audit -r requirement.txt
+
+      - name: Build Docker image
+        run: |
+          docker build -t devops-flask-app .
